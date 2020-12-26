@@ -29,20 +29,27 @@ const Search: FC<SearchProps> = ({ title }) => {
   }
 
   return(
-    <div className="hero is-light has-text-centered">
+    <div className="hero has-text-centered">
       <div className="hero-body">
         <div className="container">
-          <h1 className="title">{title}</h1>
-          <form className="py-5" onSubmit={submitHandler}>
-            <input 
-              type="text"
-              className="input has-text-centered mb-2"
-              placeholder="Enter city name"
-              style={{maxWidth: 300}}
-              value={city}
-              onChange={changeHandler}
-            />
-            <button className="button is-primary is-fullwidth" style={{maxWidth: 300, margin: '0 auto'}}>Search</button>
+          <h1 className="subtitle is-3">{title}</h1>
+          <form className="py-5 field has-addons is-justify-content-center" onSubmit={submitHandler}>
+            <div className="control">
+              <input 
+                type="text"
+                className="input has-text-centered mb-2"
+                placeholder="Enter city name"
+                style={{maxWidth: 300}}
+                value={city}
+                onChange={changeHandler}
+              />
+            </div>
+            <div className="control">
+            <button className="button is-primary" style={{maxWidth: 300, margin: '0 auto'}}><i className="fa fa-search"></i> </button>
+
+            </div>
+
+            
           </form>
         </div>
       </div>

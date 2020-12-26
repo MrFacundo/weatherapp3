@@ -5,7 +5,7 @@ import { WeatherAction, WeatherData, WeatherError, GET_WEATHER, SET_LOADING, SET
 export const getWeather = (city: string): ThunkAction<void, RootState, null, WeatherAction> => {
   return async dispatch => {
     try {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`);
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
 
       if(!res.ok) {
         const resData: WeatherError = await res.json();
@@ -30,7 +30,7 @@ export const getWeather = (city: string): ThunkAction<void, RootState, null, Wea
 export const getCurrentLocationWeather = (lat: number, long: number): ThunkAction<void, RootState, null, WeatherAction> => {
   return async dispatch => {
     try {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${process.env.REACT_APP_API_KEY}`);
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
 
       if(!res.ok) {
         const resData: WeatherError = await res.json();

@@ -28,15 +28,14 @@ const SearchCurrentLocation: FC<SearchProps> = ({ title }) => {
   }
 
   return(
-    <div className="hero has-background-info-light	 has-text-centered">
-      <div className="hero-body">
+    <div className="hero has-text-centered">
+      <div className="hero-body pt-0">
         <div className="container">
-          <h1 className="title">{title}</h1>
+          <h1 className="subtitle is-3">{title}</h1>
             <button
-            className="button is-primary is-fullwidth"
-            style={{maxWidth: 300, margin: '0 auto'}}
+            className="button is-primary is-large"
             onClick={handleClick}>
-              Current Location</button>
+              <i className="fa fa-compass fa-lg is-size-1	"></i></button>
         </div>
       </div>
     </div>
