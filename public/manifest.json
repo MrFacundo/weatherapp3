@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "weather-2-icon.png"
+      "src": "weather-2-icon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
