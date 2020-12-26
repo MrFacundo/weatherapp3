@@ -30,9 +30,9 @@ const Search: FC<SearchProps> = ({ title }) => {
 
   return(
     <div className="hero has-text-centered">
-      <div className="hero-body">
+      <div className="hero-body pb-2">
         <div className="container">
-          <h1 className="subtitle is-3">{title}</h1>
+          <h1 className="subtitle is-4">{title}</h1>
           <form className="py-5 field has-addons is-justify-content-center" onSubmit={submitHandler}>
             <div className="control">
               <input 

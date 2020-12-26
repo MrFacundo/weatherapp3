@@ -10,6 +10,10 @@ import SearchCurrentLocation from './components/SearchCurrentLocation';
 
 import { setAlert } from './store/actions/alertActions';
 import { setError } from './store/actions/weatherActions';
+import { WeatherData } from './store/types';
+
+
+
 
 const App: FC = () => {
   const dispatch = useDispatch();
@@ -19,15 +23,25 @@ const App: FC = () => {
   const alertMsg = useSelector((state: RootState) => state.alert.message);
 
   return (
-    <div className="has-text-centered">
-      <h1 className="has-text-left-tablet has-text-black-ter	is-size-1 px-6 pt-6">Weather App</h1>
-      <Search title="Enter city name and press search button" />
-      <SearchCurrentLocation title="or press the compass to get your current location" />
+    <div
+      className={
+        weatherData
+          ? weatherData.main.temp > 18
+            ? "App-hot"
+            : "App-cold"
+          : "App"
+      }
+    >
+      <div className="has-text-centered">
+        <h1 className="has-text-left-tablet has-text-black-ter	is-size-1 px-6 pt-6">Weather App</h1>
+        <Search title="Enter city name and press search button" />
+        <SearchCurrentLocation title="or press the compass to get your current location" />
 
-      {loading ? <h2 className="is-size-3 py-2">Loading...</h2> : weatherData && <Weather data={weatherData} />}
+        {loading ? <h2 className="is-size-3 py-2">Loading...</h2> : weatherData && <Weather data={weatherData} />}
 
-      {alertMsg && <Alert message={alertMsg} onClose={() => dispatch(setAlert(''))} />}
-      {error && <Alert message={error} onClose={() => dispatch(setError())} />}
+        {alertMsg && <Alert message={alertMsg} onClose={() => dispatch(setAlert(''))} />}
+        {error && <Alert message={error} onClose={() => dispatch(setError())} />}
+      </div>
     </div>
   );
 }

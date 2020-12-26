@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { getCurrentLocationWeather, setLoading } from '../store/actions/weatherActions';
@@ -31,7 +31,7 @@ const SearchCurrentLocation: FC<SearchProps> = ({ title }) => {
     <div className="hero has-text-centered">
       <div className="hero-body pt-0">
         <div className="container">
-          <h1 className="subtitle is-3">{title}</h1>
+          <h1 className="subtitle is-4 pb-2">{title}</h1>
             <button
             className="button is-primary is-large"
             onClick={handleClick}>

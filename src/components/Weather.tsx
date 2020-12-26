@@ -6,11 +6,9 @@ interface WeatherProps {
 }
 
 const Weather: FC<WeatherProps> = ({ data }) => {
-  const fahrenheit = (data.main.temp * 1.8 - 459.67).toFixed(2);
-  const celsius = (data.main.temp - 273.15).toFixed(2);
 
   return(
-    <section className="section">
+    <section className="section pt-0">
       <div className="container">
         <h1 className="title has-text-centered" style={{marginBottom: 20}}>{data.name} - {data.sys.country}</h1>
           <div className="level-item has-text-centered">
