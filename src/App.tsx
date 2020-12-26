@@ -20,8 +20,9 @@ const App: FC = () => {
 
   return (
     <div className="has-text-centered">
+      <h1 className="has-text-left-tablet has-text-black-ter	is-size-1 px-6 pt-6">Weather App</h1>
       <Search title="Enter city name and press search button" />
-      <SearchCurrentLocation title="or press button to get..." />
+      <SearchCurrentLocation title="or press the compass to get your current location" />
 
       {loading ? <h2 className="is-size-3 py-2">Loading...</h2> : weatherData && <Weather data={weatherData} />}
 

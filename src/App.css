@@ -1,3 +1,13 @@
-.level .level-item {
-	margin-bottom: 50px !important;
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #222
+		url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v774-tang-21_2.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e4010255c66c93f2db450b3305cc966a");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
