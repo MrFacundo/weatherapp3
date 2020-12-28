@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { WeatherData } from '../store/types';
+import Moment from 'react-moment';
 
 interface WeatherProps {
   data: WeatherData;
@@ -7,11 +8,14 @@ interface WeatherProps {
 
 const Weather: FC<WeatherProps> = ({ data }) => {
 
+  const currentDate = new Date;
+
   return(
     <section className="section pt-0">
       <div className="container">
-        <h1 className="title has-text-centered" style={{marginBottom: 20}}>{data.name} - {data.sys.country}</h1>
-          <div className="level-item has-text-centered">
+        <h1 className="title has-text-centered pb-3" style={{marginBottom: 20}}>{data.name} - {data.sys.country}</h1>
+          <h1 className="subtitle" ><Moment format="ddd Do MMMM YYYY">{currentDate}</Moment></h1>
+          <div className="level-item has-text-centered pt-2">
             <div>
               <p className="heading">{data.weather[0].description}</p>
               <p className="title"><img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}.png`} alt=""/></p>

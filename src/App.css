@@ -7,15 +7,20 @@ body,
 	min-height: 100vh !important;
 }
 
+.App,
+.App-cold,
+.App-hot {
+	background-repeat: repeat-y;
+}
+
 .App {
-	background: white;
+	background-image: url(background/default.jpeg);
+	background-size: cover;
 }
 
 .App-cold {
-	background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v774-tang-21_2.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e4010255c66c93f2db450b3305cc966a");
-	background-repeat: repeat-y;
+	background-image: url(background/cold.jpg);
 	background-size: cover;
-	transition: transform 1000ms ease-in-out;
 }
 
 .App-hot {
@@ -25,8 +30,6 @@ body,
 			rgba(110, 242, 255, 0.4374124649859944) 71%,
 			rgba(198, 243, 252, 1) 100%
 		),
-		url("https://downloader.disk.yandex.ru/preview/21da6c13d8aacffb1d5c1763ddc5efb6a09a72a6558222ef501a1d956ba9f217/5fe753ac/H3dWPp6f_XKoYVd4jsm4kY8iGoyyRMatrolHb0CVrAajP6hi-2SmEVHknwN70Ktiq_J6bpmRyOJonT3VoXnDag%3D%3D?uid=0&filename=Shadows%2C%20Murrurundi.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1920x949");
-	background-repeat: repeat-y;
+		url(background/hot.jpg);
 	background-size: cover;
-	transition: transform 1000ms ease-in-out;
 }
